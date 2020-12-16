@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net5</TargetFramework>
+		<PackageType>Template</PackageType>
+		<PackageVersion>1.0.0</PackageVersion>
+		<PackageId>GmodDotNet.Templates</PackageId>
+		<Title>GmodDotNet Templates</Title>
+		<Authors>GmodDotNet</Authors>
+		<Description>Project Templates for GmodDotNet module</Description>
+		<PackageTags>dotnet-new;templates</PackageTags>
+		<IncludeContentInPack>true</IncludeContentInPack>
+		<IncludeBuildOutput>false</IncludeBuildOutput>
+		<ContentTargetFolders>content</ContentTargetFolders>
+	</PropertyGroup>
+	<ItemGroup>
+		<Content Include="ProjectTemplates\**\*" Exclude="ProjectTemplates\**\bin\**;ProjectTemplates\**\obj\**" />
+    	<Compile Remove="**\*" />
+	</ItemGroup>
+</Project>
