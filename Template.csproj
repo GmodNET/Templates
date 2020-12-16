@@ -3,9 +3,9 @@
 		<TargetFramework>net5</TargetFramework>
 		<PackageType>Template</PackageType>
 		<PackageVersion>1.0.0</PackageVersion>
-		<PackageId>GmodDotNet.Templates</PackageId>
+		<PackageId>GmodNET.Templates</PackageId>
 		<Title>GmodDotNet Templates</Title>
-		<Authors>GmodDotNet</Authors>
+		<Authors>GmodNET</Authors>
 		<Description>Project Templates for GmodDotNet module</Description>
 		<PackageTags>dotnet-new;templates</PackageTags>
 		<IncludeContentInPack>true</IncludeContentInPack>
