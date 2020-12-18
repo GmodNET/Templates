@@ -2,7 +2,7 @@
 
 namespace TemplateModule
 {
-    public class Module : IModule
+    public class TemplateModule : IModule
     {
         public string ModuleName => "TemplateModule";
 
