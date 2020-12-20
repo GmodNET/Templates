@@ -11,9 +11,9 @@
 		<IncludeContentInPack>true</IncludeContentInPack>
 		<IncludeBuildOutput>false</IncludeBuildOutput>
 		<ContentTargetFolders>content</ContentTargetFolders>
+		<NoBuild>true</NoBuild>
 	</PropertyGroup>
 	<ItemGroup>
 		<Content Include="ProjectTemplates\**\*" Exclude="ProjectTemplates\**\bin\**;ProjectTemplates\**\obj\**" />
-    	<Compile Remove="**\*" />
 	</ItemGroup>
 </Project>
