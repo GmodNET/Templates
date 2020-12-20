@@ -14,6 +14,6 @@
 		<NoBuild>true</NoBuild>
 	</PropertyGroup>
 	<ItemGroup>
-		<Content Include="ProjectTemplates\**\*" Exclude="ProjectTemplates\**\bin\**;ProjectTemplates\**\obj\**" />
+		<Content Include="ProjectTemplates\gmodnet-module\.template.config\template.json;ProjectTemplates\gmodnet-module\nuget.config;ProjectTemplates\gmodnet-module\TemplateModule.csproj;ProjectTemplates\gmodnet-module\TemplateModule.cs" />
 	</ItemGroup>
 </Project>
