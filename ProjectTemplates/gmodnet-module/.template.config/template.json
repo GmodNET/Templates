@@ -1,0 +1,14 @@
+﻿{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "GmodNET",
+    "classifications": [ "Common", "Library", "C#9", "gmodnet", "gmod-dot-net" ],
+    "identity": "gmodnet-module",
+    "name": "GmodDotNet Module",
+    "shortName": "gmodnet-module",
+    "tags": {
+        "language": "C#",
+        "type": "item"
+    },
+    "sourceName": "TemplateModule",
+    "preferNameDirectory": true
+}
