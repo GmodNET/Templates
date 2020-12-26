@@ -2,7 +2,7 @@
 	<PropertyGroup>
 		<TargetFramework>net5</TargetFramework>
 		<PackageType>Template</PackageType>
-		<PackageVersion>1.0.0</PackageVersion>
+		<VersionFilePath>version.json</VersionFilePath>
 		<PackageId>GmodNET.Templates</PackageId>
 		<Title>GmodDotNet Templates</Title>
 		<Authors>GmodNET</Authors>
@@ -14,6 +14,9 @@
 		<NoBuild>true</NoBuild>
 	</PropertyGroup>
 	<ItemGroup>
+		<PackageReference Include="GmodNET.VersionTool.Target" Version="1.0.1">
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
 		<Content Include="ProjectTemplates\gmodnet-module\.template.config\template.json;ProjectTemplates\gmodnet-module\nuget.config;ProjectTemplates\gmodnet-module\TemplateModule.csproj;ProjectTemplates\gmodnet-module\TemplateModule.cs" />
 	</ItemGroup>
 </Project>

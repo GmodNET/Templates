@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "gmodnet.versiontool": {
+      "version": "1.0.1",
+      "commands": [
+        "gmodnet-vt"
+      ]
+    }
+  }
+}
