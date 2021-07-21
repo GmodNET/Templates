@@ -1,0 +1,31 @@
+name: CD
+
+on:
+  push:
+  release:
+    types: [published]
+
+jobs:
+  build-and-deploy:
+    name: Build and deploy
+    runs-on: ubuntu-20.04
+    if: github.repository == 'GmodNET/Templates'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.4
+
+      - name: Setup dotnet SDK
+        uses: actions/setup-dotnet@v1.8.1
+
+      - name: Build nupkgs
+        run: dotnet pack Template.csproj -c Release -o nupkgs
+
+      - name: Authorize DevOps
+        run: dotnet nuget update source gmodnet-packages --username CD --password ${{ secrets.AZURE_DEVOPS_ARTIFACTS_PAT }} --store-password-in-clear-text
+
+      - name: Push nupkgs to DevOps
+        run: dotnet nuget push nupkgs/**.nupkg --source gmodnet-packages --api-key az --skip-duplicate
+
+      - name: Push nupkgs to NuGet.org
+        if: github.event_name == 'release'
+        run: dotnet nuget push nupkgs/**.nupkg --source nuget --api-key ${{ secrets.NUGET_API_KEY }} --skip-duplicate
