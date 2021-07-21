@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.Build.NoTargets/3.0.4">
 	<PropertyGroup>
 		<TargetFramework>net5</TargetFramework>
 		<PackageType>Template</PackageType>
@@ -9,14 +9,16 @@
 		<Description>Project Templates for GmodDotNet module</Description>
 		<PackageTags>dotnet-new;templates</PackageTags>
 		<IncludeContentInPack>true</IncludeContentInPack>
-		<IncludeBuildOutput>false</IncludeBuildOutput>
 		<ContentTargetFolders>content</ContentTargetFolders>
-		<NoBuild>true</NoBuild>
 	</PropertyGroup>
+  
 	<ItemGroup>
-		<PackageReference Include="GmodNET.VersionTool.Target" Version="1.0.1">
+		<PackageReference Include="GmodNET.VersionTool.MSBuild" Version="2.0.0">
 			<PrivateAssets>all</PrivateAssets>
 		</PackageReference>
+    
+    <VersionFile Include="version.json" />
+    
 		<Content Include="ProjectTemplates\gmodnet-module\.template.config\template.json;ProjectTemplates\gmodnet-module\nuget.config;ProjectTemplates\gmodnet-module\TemplateModule.csproj;ProjectTemplates\gmodnet-module\TemplateModule.cs" />
 	</ItemGroup>
 </Project>
