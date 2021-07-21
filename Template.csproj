@@ -7,6 +7,7 @@
 		<Authors>GmodNET</Authors>
 		<Description>Project Templates for GmodDotNet module</Description>
 		<PackageTags>dotnet-new;templates</PackageTags>
+    <PackageIcon>gmodnetlogo.png</PackageIcon>
 		<IncludeContentInPack>true</IncludeContentInPack>
 		<ContentTargetFolders>content</ContentTargetFolders>
 	</PropertyGroup>
@@ -17,6 +18,8 @@
 		</PackageReference>
     
     <VersionFile Include="version.json" />
+
+    <Content Include="gmodnetlogo.png" PackagePath="/" />
     
 		<Content Include="ProjectTemplates\gmodnet-module\.template.config\template.json;ProjectTemplates\gmodnet-module\nuget.config;ProjectTemplates\gmodnet-module\TemplateModule.csproj;ProjectTemplates\gmodnet-module\TemplateModule.cs" />
 	</ItemGroup>
