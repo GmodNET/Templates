@@ -2,7 +2,6 @@
 	<PropertyGroup>
 		<TargetFramework>net5</TargetFramework>
 		<PackageType>Template</PackageType>
-		<VersionFilePath>version.json</VersionFilePath>
 		<PackageId>GmodNET.Templates</PackageId>
 		<Title>GmodDotNet Templates</Title>
 		<Authors>GmodNET</Authors>
