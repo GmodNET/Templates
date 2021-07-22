@@ -61,26 +61,41 @@ namespace TemplateModuleWeb
             if(!getPlayersTasks.IsEmpty)
             {
                 List<string> players = new List<string>();
+                Exception executionException = null;
 
-                lua.PushGlobalTable();
-                lua.GetField(-1, "player");
-                lua.GetField(-1, "GetAll");
-                lua.MCall(0, 1);
-                lua.PushNil();
-                while(lua.Next(-2) != 0)
+                try
                 {
-                    lua.GetField(-1, "Nick");
-                    lua.Push(-2);
-                    lua.MCall(1, 1);
-                    players.Add(lua.GetString(-1));
-                    lua.Pop(2);
+                    lua.PushGlobalTable();
+                    lua.GetField(-1, "player");
+                    lua.GetField(-1, "GetAll");
+                    lua.MCall(0, 1);
+                    lua.PushNil();
+                    while (lua.Next(-2) != 0)
+                    {
+                        lua.GetField(-1, "Nick");
+                        lua.Push(-2);
+                        lua.MCall(1, 1);
+                        players.Add(lua.GetString(-1));
+                        lua.Pop(2);
+                    }
+                    lua.Pop(lua.Top());
                 }
-                lua.Pop(lua.Top());
+                catch (Exception e)
+                {
+                    executionException = e;
+                }
 
                 TaskCompletionSource<List<string>> task;
                 while(getPlayersTasks.TryDequeue(out task))
                 {
-                    task.SetResult(players);
+                    if (executionException != null)
+                    {
+                        task.SetResult(players);
+                    }
+                    else
+                    {
+                        task.SetException(executionException);
+                    }
                 }
             }
         }

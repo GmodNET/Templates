@@ -27,16 +27,14 @@ namespace TemplateModuleWeb
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseRouting();
-
             app.Run(async context =>
             {
                 GmodInteropService gmodInteropService = context.RequestServices.GetRequiredService<GmodInteropService>();
                 List<string> players = await gmodInteropService.GetPlayersList();
-                string response_text = "Hello! \n Players on server: \n";
+                string response_text = "Hello! \nPlayers on server:";
                 foreach (string player in players)
                 {
-                    response_text += player + "\n";
+                    response_text += "\n" + player;
                 }
                 context.Response.StatusCode = 200;
                 context.Response.Headers.Add("Content-Type", "text/plain");
