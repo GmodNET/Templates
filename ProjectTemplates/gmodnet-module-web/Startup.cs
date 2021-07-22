@@ -27,6 +27,8 @@ namespace TemplateModuleWeb
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseStaticFiles();
+
             app.Run(async context =>
             {
                 GmodInteropService gmodInteropService = context.RequestServices.GetRequiredService<GmodInteropService>();
