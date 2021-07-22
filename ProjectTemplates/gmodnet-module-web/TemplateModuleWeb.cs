@@ -26,7 +26,7 @@ namespace TemplateModuleWeb
         public void Load(ILua lua, bool is_serverside, ModuleAssemblyLoadContext assembly_context)
         {
             logger = new LoggerConfiguration()
-                .MinimumLevel.Verbose()
+                .MinimumLevel.Information()
                 .WriteTo.GmodSink()
                 .CreateLogger();
 
