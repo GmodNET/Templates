@@ -88,7 +88,7 @@ namespace TemplateModuleWeb
                 TaskCompletionSource<List<string>> task;
                 while(getPlayersTasks.TryDequeue(out task))
                 {
-                    if (executionException != null)
+                    if (executionException == null)
                     {
                         task.SetResult(players);
                     }
