@@ -23,5 +23,7 @@
     <Content Include="gmodnetlogo.png" PackagePath="/" />
     
 		<Content Include="ProjectTemplates\gmodnet-module\.template.config\template.json;ProjectTemplates\gmodnet-module\nuget.config;ProjectTemplates\gmodnet-module\TemplateModule.csproj;ProjectTemplates\gmodnet-module\TemplateModule.cs" />
+  
+		<Content Include="ProjectTemplates\gmodnet-module-web\.template.config\template.json;ProjectTemplates\gmodnet-module-web\appsettings.Development.json;ProjectTemplates\gmodnet-module-web\appsettings.json;ProjectTemplates\gmodnet-module-web\GmodHost.cs;ProjectTemplates\gmodnet-module-web\GmodInteropService.cs;ProjectTemplates\gmodnet-module-web\nuget.config;ProjectTemplates\gmodnet-module-web\Startup.cs;ProjectTemplates\gmodnet-module-web\TemplateModuleWeb.cs;ProjectTemplates\gmodnet-module-web\TemplateModuleWeb.csproj" />
 	</ItemGroup>
 </Project>
