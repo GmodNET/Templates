@@ -1,9 +1,9 @@
 ﻿{
     "$schema": "http://json.schemastore.org/template",
     "author": "GmodNET",
-    "classifications": [ "Common", "Library", "C#9", "gmodnet", "gmod-dot-net", "Web" ],
+    "classifications": [ "Gmod.NET","Module", "Web" ],
     "identity": "GmodNET.Templates.ModuleWeb",
-    "name": "GmodDotNet Web Module",
+    "name": "Gmod.NET Web Module",
     "shortName": "gmodnet-module-web",
     "tags": {
         "language": "C#",
