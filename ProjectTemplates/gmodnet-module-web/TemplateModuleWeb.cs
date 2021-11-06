@@ -10,6 +10,7 @@ using Serilog;
 using Serilog.Core;
 using GmodNET.Serilog.Sink;
 using Microsoft.Extensions.DependencyInjection;
+using GmodNET.Extensions.Hosting;
 
 namespace TemplateModuleWeb
 {
@@ -59,9 +60,7 @@ namespace TemplateModuleWeb
 
         // Host configuration builder
         IHostBuilder CreateHostBuilder() =>
-            GmodHost.GmodHostDefaults()
-                    .UseContentRoot(new FileInfo(typeof(TemplateModuleWeb).Assembly.Location).DirectoryName)
-                    .UseSerilog(logger)
+            GmodNetHostBuilder.CreateDefaultBuilder<TemplateModuleWeb>(logger)
                     .ConfigureWebHostDefaults(webBuilder =>
                     {
                         webBuilder.UseSetting(WebHostDefaults.PreventHostingStartupKey, "true");
