@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <PublishDirName>publish\$(AssemblyName)</PublishDirName>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="GmodNET.API" Version="0.7.0-rc.1.56307663.main" />
+    <PackageReference Include="GmodNET.Serilog.Sink" Version="1.1.0-preview.1.57595220.main" />
+    <PackageReference Include="Serilog.AspNetCore" Version="4.1.0" />
+    <PackageReference Include="GmodNET.Extensions.Hosting" Version="1.0.0-alpha.2.57830918.main" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="nuget.config" />
+  </ItemGroup>
+
+</Project>
