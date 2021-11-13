@@ -1,2 +1,2 @@
 # Templates
-Templates for .NET Templates Engine
+Gmod.NET templates for .NET Templates Engine
