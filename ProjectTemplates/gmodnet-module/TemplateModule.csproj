@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<OutputType>Library</OutputType>
-		<TargetFramework>net5.0</TargetFramework>
+		<TargetFramework>net6.0</TargetFramework>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
-		<PackageReference Include="GmodNET.API" Version="0.7.0-beta.2.48990600.main" />
+		<PackageReference Include="GmodNET.API" Version="0.7.0-rc.1.58638981.main" />
 	</ItemGroup>
 </Project>
