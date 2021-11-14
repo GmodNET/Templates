@@ -2,10 +2,11 @@
 	<PropertyGroup>
 		<OutputType>Library</OutputType>
 		<TargetFramework>net6.0</TargetFramework>
+		<PublishDirName>publish\$(AssemblyName)</PublishDirName>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
-		<PackageReference Include="GmodNET.API" Version="0.7.0-rc.1.58638981.main" />
+		<PackageReference Include="GmodNET.API" Version="0.7.0" />
 	</ItemGroup>
 </Project>

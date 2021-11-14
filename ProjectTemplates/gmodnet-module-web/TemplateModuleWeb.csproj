@@ -7,10 +7,10 @@
   </PropertyGroup>
   
   <ItemGroup>
-    <PackageReference Include="GmodNET.API" Version="0.7.0-rc.1.58638981.main" />
+    <PackageReference Include="GmodNET.API" Version="0.7.0" />
     <PackageReference Include="GmodNET.Serilog.Sink" Version="1.1.0" />
     <PackageReference Include="Serilog.AspNetCore" Version="4.1.0" />
-    <PackageReference Include="GmodNET.Extensions.Hosting" Version="1.0.0-rc.1.58752625.main" />
+    <PackageReference Include="GmodNET.Extensions.Hosting" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>
