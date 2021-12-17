@@ -7,6 +7,6 @@
 
 	<ItemGroup>
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
-		<PackageReference Include="GmodNET.API" Version="0.7.0" />
+		<PackageReference Include="GmodNET.API" Version="1.0.0-alpha.1.61871480.main" />
 	</ItemGroup>
 </Project>
